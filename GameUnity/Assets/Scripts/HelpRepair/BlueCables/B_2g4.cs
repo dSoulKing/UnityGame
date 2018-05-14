@@ -37,29 +37,29 @@ public class B_2g4 : MonoBehaviour {
 
     void Update()
     {
-        if (transform.localEulerAngles.z == 0)
+        if (transform.localEulerAngles.z == 204.5)
         {
             if (RepairManager.B_1g2)
             {
                 spriteRenderer.sprite = spriteB;
                 transform.localPosition = new Vector3(4.323f, -1.19f, 0);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
                 RepairManager.B_2g4 = true;
             }
             else
             {
                 spriteRenderer.sprite = spriteG;
-                transform.localPosition = new Vector3(4.305281f, -1.155931f, 0);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localPosition = new Vector3(-5.231659f, 2.581672f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
                 RepairManager.B_2g4 = false;
             }
         }
         else
         {
-            transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            transform.localScale = new Vector3(1.54f, 1.54f, 1.54f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(4.305281f, -1.155931f, 0);
+            transform.localPosition = new Vector3(-5.231659f, 2.581672f, 0);
 
             RepairManager.B_2g4 = false;
         }

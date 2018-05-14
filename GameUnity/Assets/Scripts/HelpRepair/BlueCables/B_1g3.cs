@@ -37,9 +37,9 @@ public class B_1g3 : MonoBehaviour {
 
     void Update()
     {
-        if (transform.localEulerAngles.z == 0)
+        if (transform.localEulerAngles.z == -24.5)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
             spriteRenderer.sprite = spriteB;
             transform.localPosition = new Vector3(0.092f, 0.038f, 0);
             
@@ -47,9 +47,9 @@ public class B_1g3 : MonoBehaviour {
         }
         else
         {
-            transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            transform.localScale = new Vector3(1.54f, 1.54f, 1.54f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(0, 0, 0);
+            transform.localPosition = new Vector3(-12.74164f, 3.797672f, 0);
             
             RepairManager.B_1g3 = false;
         }
