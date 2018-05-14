@@ -42,7 +42,7 @@ public class B_2g4 : MonoBehaviour {
             if (RepairManager.B_1g2)
             {
                 spriteRenderer.sprite = spriteB;
-                transform.localPosition = new Vector3(4.323f, -1.19f, 0);
+                transform.localPosition = new Vector3(-5.178f, 2.622f, 0);
                 transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
                 RepairManager.B_2g4 = true;

@@ -7,6 +7,8 @@ public class RepairManager : MonoBehaviour {
     public GameObject parent;
     public GameObject computerCore;
 
+    public GameObject electricPowerBlue;
+
     public GameObject electricPowerB1;
     public GameObject electricPowerB2;
     public GameObject electricPowerB3;
@@ -133,6 +135,8 @@ public class RepairManager : MonoBehaviour {
 
     private void Start()
     {
+        Instantiate(electricPowerBlue, electricPowerBlue.transform.position, electricPowerBlue.transform.rotation);
+
         B_1g1 = false;
         B_1g2 = false;
         B_1g3 = false;
@@ -257,11 +261,15 @@ public class RepairManager : MonoBehaviour {
 
         if (B_7g1)
         {
+
+            Debug.Log("electricBlue true");
             electricTimeB -= Time.deltaTime;
 
             if (electricTimeB <= 0 && i < 17)
             {
-                electricPowerBTab[i].SetActive(true);
+                Debug.Log("electricBlue time");
+                electricPowerBlue.transform.GetChild(i).gameObject.SetActive(true);
+                //electricPowerBTab[i].SetActive(true);
                 i++;
                 electricTimeB = 0.5f;
             }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +13,13 @@ public class B_2g1 : MonoBehaviour {
     private Vector3 petit;
     private Vector3 grand;
     private int randomRotation;
+    private double angle;
 
     void Start()
     {
         spriteRenderer = thisCables.GetComponent<SpriteRenderer>();
 
-        randomRotation = Random.Range(1, 4);
+        randomRotation = UnityEngine.Random.Range(1, 4);
         switch (randomRotation)
         {
             case 2:
@@ -33,33 +35,36 @@ public class B_2g1 : MonoBehaviour {
                 transform.Rotate(0, 0, 90);
                 break;
         }
+
+        angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
     }
 
     void Update()
     {
-        if (transform.localEulerAngles.z == 270)
+        if (angle == 114.5)
         {
             if (RepairManager.B_3g1)
             {
                 spriteRenderer.sprite = spriteB;
-                transform.localPosition = new Vector3(3.411f, 0.301f, 0);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localPosition = new Vector3(-7.645f, 0.949f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
                 RepairManager.B_2g1 = true;
             }
             else
             {
                 spriteRenderer.sprite = spriteG;
-                transform.localPosition = new Vector3(3.446f, 0.321f, 0);
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localPosition = new Vector3(-7.601654f, 0.8906724f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
                 RepairManager.B_2g1 = false;
             }
         }
         else
         {
-            transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            transform.localScale = new Vector3(1.54f, 1.54f, 1.54f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(3.446f, 0.321f, 0);
+            transform.localPosition = new Vector3(-7.601654f, 0.8906724f, 0);
 
             RepairManager.B_2g1 = false;
         }
@@ -69,5 +74,8 @@ public class B_2g1 : MonoBehaviour {
     private void OnMouseDown()
     {
         transform.Rotate(0, 0, 90);
+        angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
+        Debug.Log("2G (2) : " + angle);
     }
 }

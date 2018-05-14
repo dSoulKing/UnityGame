@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,12 +13,13 @@ public class B_2g2 : MonoBehaviour {
     private Vector3 petit;
     private Vector3 grand;
     private int randomRotation;
+    private double angle;
 
     void Start()
     {
         spriteRenderer = thisCables.GetComponent<SpriteRenderer>();
 
-        randomRotation = Random.Range(1, 4);
+        randomRotation = UnityEngine.Random.Range(1, 4);
         switch (randomRotation)
         {
             case 2:
@@ -33,11 +35,14 @@ public class B_2g2 : MonoBehaviour {
                 transform.Rotate(0, 0, -90);
                 break;
         }
+
+        angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
     }
 
     void Update()
     {
-        if (transform.localEulerAngles.z == -24.5)
+        if (angle == 335.5)
         {
             if (RepairManager.B_2g3)
             {
@@ -69,5 +74,8 @@ public class B_2g2 : MonoBehaviour {
     private void OnMouseDown()
     {
         transform.Rotate(0, 0, -90);
+        angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
+        Debug.Log("2G : " + angle);
     }
 }
