@@ -42,29 +42,29 @@ public class Y_8g1 : MonoBehaviour {
 
     void Update()
     {
-        if (angle == 294.5)
+        if (angle == 155.5)
         {
             if (RepairManager.Y_2g3 && RepairManager.Y_5g2)
             {
                 spriteRenderer.sprite = spriteY;
-                transform.localPosition = new Vector3(-0.03759f, -0.02971f, 0);
-                transform.localScale = new Vector3(0.0284f, 0.0284f, 0.0284f);
+                transform.localPosition = new Vector3(4.882f, -2.236f, 0);
+                transform.localScale = new Vector3(2.4f, 2.4f, 2.4f);
 
                 RepairManager.Y_8g1 = true;
             }
             else
             {
                 spriteRenderer.sprite = spriteG;
-                transform.localPosition = new Vector3(-0.03753f, -0.02856f, 0);
-                transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+                transform.localPosition = new Vector3(4.932556f, -2.307007f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
                 RepairManager.Y_8g1 = false;
             }
         }
         else
         {
-            transform.localScale = new Vector3(0.016f, 0.016f, 0.016f);
+            transform.localScale = new Vector3(1.45f, 1.45f, 1.45f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(-0.03753f, -0.02856f, 0);
+            transform.localPosition = new Vector3(4.932556f, -2.307007f, 0);
 
             RepairManager.Y_8g1 = false;
         }

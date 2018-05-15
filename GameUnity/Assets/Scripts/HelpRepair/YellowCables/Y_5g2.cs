@@ -47,15 +47,15 @@ public class Y_5g2 : MonoBehaviour
         {
             spriteRenderer.sprite = spriteY;
             transform.localPosition = new Vector3(-0.06931f, -0.03409f, 0);
-            transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+            transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
             RepairManager.Y_5g2 = true;
         }
         else
         {
-            transform.localScale = new Vector3(0.016f, 0.016f, 0.016f);
+            transform.localScale = new Vector3(1.45f, 1.45f, 1.45f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(-0.06856465f, -0.03480148f, 0);
+            transform.localPosition = new Vector3(7.528564f, -2.726007f, 0);
 
             RepairManager.Y_5g2 = false;
         }
@@ -67,6 +67,5 @@ public class Y_5g2 : MonoBehaviour
         transform.Rotate(0, 0, -90);
         angle = transform.localEulerAngles.z;
         angle = Math.Round(angle, 1);
-        //Debug.Log(angle);
     }
 }
