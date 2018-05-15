@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class G_2g4 : MonoBehaviour {
+public class V_2g4 : MonoBehaviour {
 
     public GameObject thisCables;
     public Sprite spriteV;
@@ -45,16 +45,16 @@ public class G_2g4 : MonoBehaviour {
         if (angle == 114.5)
         {
             spriteRenderer.sprite = spriteV;
-            transform.localPosition = new Vector3(0.1238f, -0.06679f, 0);
-            transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+            transform.localPosition = new Vector3(-10.858f, -5.401f, 0);
+            transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
             RepairManager.G_2g4 = true;
         }
         else
         {
-            transform.localScale = new Vector3(0.016f, 0.016f, 0.016f);
+            transform.localScale = new Vector3(1.45f, 1.45f, 1.45f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(0.1235762f, -0.06634426f, 0);
+            transform.localPosition = new Vector3(-10.84589f, -5.372404f, 0);
 
             RepairManager.G_2g4 = false;
         }
@@ -66,6 +66,5 @@ public class G_2g4 : MonoBehaviour {
         transform.Rotate(0, 0, 90);
         angle = transform.localEulerAngles.z;
         angle = Math.Round(angle, 1);
-        //Debug.Log(angle);
     }
 }

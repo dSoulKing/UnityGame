@@ -46,7 +46,7 @@ public class Y_5g2 : MonoBehaviour
         if (angle == 155.5)
         {
             spriteRenderer.sprite = spriteY;
-            transform.localPosition = new Vector3(-0.06931f, -0.03409f, 0);
+            transform.localPosition = new Vector3(7.599f, -2.663f, 0);
             transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
             RepairManager.Y_5g2 = true;
