@@ -47,25 +47,25 @@ public class R_2g6 : MonoBehaviour {
             if (RepairManager.R_5g1)
             {
                 spriteRenderer.sprite = spriteR;
-                transform.localPosition = new Vector3(-0.04374f, 0.04761f, 0);
-                transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+                transform.localPosition = new Vector3(5.022f, 1.952f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
                 RepairManager.R_2g6 = true;
             }
             else
             {
                 spriteRenderer.sprite = spriteG;
-                transform.localPosition = new Vector3(-0.04350889f, 0.04794693f, 0);
-                transform.localScale = new Vector3(0.02f, 0.02f, 0.02f);
+                transform.localPosition = new Vector3(5.006866f, 1.979877f, 0);
+                transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
 
                 RepairManager.R_2g6 = false;
             }
         }
         else
         {
-            transform.localScale = new Vector3(0.016f, 0.016f, 0.016f);
+            transform.localScale = new Vector3(1.45f, 1.45f, 1.45f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(-0.04350889f, 0.04794693f, 0);
+            transform.localPosition = new Vector3(5.006866f, 1.979877f, 0);
 
             RepairManager.R_2g6 = false;
         }

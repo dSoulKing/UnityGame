@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ public class R_5g1 : MonoBehaviour {
     {
         spriteRenderer = thisCables.GetComponent<SpriteRenderer>();
 
-        randomRotation = Random.Range(1, 4);
+        randomRotation = UnityEngine.Random.Range(1, 4);
         switch (randomRotation)
         {
             case 2:
@@ -36,6 +37,7 @@ public class R_5g1 : MonoBehaviour {
         }
 
         angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
     }
 
     void Update()
@@ -44,16 +46,16 @@ public class R_5g1 : MonoBehaviour {
         {
             
             spriteRenderer.sprite = spriteR;
-            transform.localPosition = new Vector3(-0.05274f, 0.06948f, 0);
-            transform.localScale = new Vector3(0.0284f, 0.0284f, 0.0284f);
+            transform.localPosition = new Vector3(5.792f, 3.819f, 0);
+            transform.localScale = new Vector3(2.4f, 2.4f, 2.4f);
 
             RepairManager.R_5g1 = true;
         }
         else
         {
-            transform.localScale = new Vector3(0.016f, 0.016f, 0.016f);
+            transform.localScale = new Vector3(1.45f, 1.45f, 1.45f);
             spriteRenderer.sprite = spriteG;
-            transform.localPosition = new Vector3(-0.05387878f, 0.06818771f, 0);
+            transform.localPosition = new Vector3(5.881866f, 3.709877f, 0);
 
             RepairManager.R_5g1 = false;
         }
@@ -64,5 +66,6 @@ public class R_5g1 : MonoBehaviour {
     {
         transform.Rotate(0, 0, -90);
         angle = transform.localEulerAngles.z;
+        angle = Math.Round(angle, 1);
     }
 }

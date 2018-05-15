@@ -135,18 +135,18 @@ public class RepairManager : MonoBehaviour {
         }
         for (int p = 0; p < 17; p++)
         {
-            electricPowerBTab[p] = electricPowerRed.transform.GetChild(p).gameObject;
-            electricPowerBTab[p].SetActive(false);
+            electricPowerRTab[p] = electricPowerRed.transform.GetChild(p).gameObject;
+            electricPowerRTab[p].SetActive(false);
         }
         for (int q = 0; q < 17; q++)
         {
-            electricPowerBTab[q] = electricPowerYellow.transform.GetChild(q).gameObject;
-            electricPowerBTab[q].SetActive(false);
+            electricPowerYTab[q] = electricPowerYellow.transform.GetChild(q).gameObject;
+            electricPowerYTab[q].SetActive(false);
         }
-        for (int r = 0; r < 17; r++)
+        for (int r = 0; r < 13; r++)
         {
-            electricPowerBTab[r] = electricPowerGreen.transform.GetChild(r).gameObject;
-            electricPowerBTab[r].SetActive(false);
+            electricPowerGTab[r] = electricPowerGreen.transform.GetChild(r).gameObject;
+            electricPowerGTab[r].SetActive(false);
         }
     }
 
@@ -155,16 +155,9 @@ public class RepairManager : MonoBehaviour {
 
         if (B_7g1)
         {
-
-            Debug.Log("electricBlue true");
             electricTimeB -= Time.deltaTime;
-
             if (electricTimeB <= 0 && i < 17)
             {
-                Debug.Log("electricBlue time");
-                //electricPowerBlue.transform.GetChild(i).gameObject.SetActive(true);
-                //electricPowerBTab[i].SetActive(true);
-                //electricPowerBTab[i] = electricPowerBlue.transform.GetChild(i).gameObject;
                 electricPowerBTab[i].SetActive(true);
                 i++;
                 electricTimeB = 1f;
