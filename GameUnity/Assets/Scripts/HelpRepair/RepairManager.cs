@@ -8,74 +8,9 @@ public class RepairManager : MonoBehaviour {
     public GameObject computerCore;
 
     public GameObject electricPowerBlue;
-
-    public GameObject electricPowerB1;
-    public GameObject electricPowerB2;
-    public GameObject electricPowerB3;
-    public GameObject electricPowerB4;
-    public GameObject electricPowerB5;
-    public GameObject electricPowerB6;
-    public GameObject electricPowerB7;
-    public GameObject electricPowerB8;
-    public GameObject electricPowerB9;
-    public GameObject electricPowerB10;
-    public GameObject electricPowerB11;
-    public GameObject electricPowerB12;
-    public GameObject electricPowerB13;
-    public GameObject electricPowerB14;
-    public GameObject electricPowerB15;
-    public GameObject electricPowerB16;
-    public GameObject electricPowerB17;
-
-    public GameObject electricPowerR1;
-    public GameObject electricPowerR2;
-    public GameObject electricPowerR3;
-    public GameObject electricPowerR4;
-    public GameObject electricPowerR5;
-    public GameObject electricPowerR6;
-    public GameObject electricPowerR7;
-    public GameObject electricPowerR8;
-    public GameObject electricPowerR9;
-    public GameObject electricPowerR10;
-    public GameObject electricPowerR11;
-    public GameObject electricPowerR12;
-    public GameObject electricPowerR13;
-    public GameObject electricPowerR14;
-    public GameObject electricPowerR15;
-    public GameObject electricPowerR16;
-    public GameObject electricPowerR17;
-
-    public GameObject electricPowerY1;
-    public GameObject electricPowerY2;
-    public GameObject electricPowerY3;
-    public GameObject electricPowerY4;
-    public GameObject electricPowerY5;
-    public GameObject electricPowerY6;
-    public GameObject electricPowerY7;
-    public GameObject electricPowerY8;
-    public GameObject electricPowerY9;
-    public GameObject electricPowerY10;
-    public GameObject electricPowerY11;
-    public GameObject electricPowerY12;
-    public GameObject electricPowerY13;
-    public GameObject electricPowerY14;
-    public GameObject electricPowerY15;
-    public GameObject electricPowerY16;
-    public GameObject electricPowerY17;
-
-    public GameObject electricPowerG1;
-    public GameObject electricPowerG2;
-    public GameObject electricPowerG3;
-    public GameObject electricPowerG4;
-    public GameObject electricPowerG5;
-    public GameObject electricPowerG6;
-    public GameObject electricPowerG7;
-    public GameObject electricPowerG8;
-    public GameObject electricPowerG9;
-    public GameObject electricPowerG10;
-    public GameObject electricPowerG11;
-    public GameObject electricPowerG12;
-    public GameObject electricPowerG13;
+    public GameObject electricPowerRed;
+    public GameObject electricPowerYellow;
+    public GameObject electricPowerGreen;
 
     public static bool B_1g1;
     public static bool B_1g2;
@@ -135,8 +70,6 @@ public class RepairManager : MonoBehaviour {
 
     private void Start()
     {
-        Instantiate(electricPowerBlue, electricPowerBlue.transform.position, electricPowerBlue.transform.rotation);
-
         B_1g1 = false;
         B_1g2 = false;
         B_1g3 = false;
@@ -178,73 +111,13 @@ public class RepairManager : MonoBehaviour {
         G_2g3 = false;
         G_2g4 = false;
 
-        electricPowerBTab = new GameObject[] {electricPowerB1,
-                                              electricPowerB2,
-                                              electricPowerB3,
-                                              electricPowerB4,
-                                              electricPowerB5,
-                                              electricPowerB6,
-                                              electricPowerB7,
-                                              electricPowerB8,
-                                              electricPowerB9,
-                                              electricPowerB10,
-                                              electricPowerB11,
-                                              electricPowerB12,
-                                              electricPowerB13,
-                                              electricPowerB14,
-                                              electricPowerB15,
-                                              electricPowerB16,
-                                              electricPowerB17};
+        electricPowerBTab = new GameObject[17];
 
-        electricPowerRTab = new GameObject[] {electricPowerR1,
-                                              electricPowerR2,
-                                              electricPowerR3,
-                                              electricPowerR4,
-                                              electricPowerR5,
-                                              electricPowerR6,
-                                              electricPowerR7,
-                                              electricPowerR8,
-                                              electricPowerR9,
-                                              electricPowerR10,
-                                              electricPowerR11,
-                                              electricPowerR12,
-                                              electricPowerR13,
-                                              electricPowerR14,
-                                              electricPowerR15,
-                                              electricPowerR16,
-                                              electricPowerR17};
+        electricPowerRTab = new GameObject[17];
 
-        electricPowerYTab = new GameObject[] {electricPowerY1,
-                                              electricPowerY2,
-                                              electricPowerY3,
-                                              electricPowerY4,
-                                              electricPowerY5,
-                                              electricPowerY6,
-                                              electricPowerY7,
-                                              electricPowerY8,
-                                              electricPowerY9,
-                                              electricPowerY10,
-                                              electricPowerY11,
-                                              electricPowerY12,
-                                              electricPowerY13,
-                                              electricPowerY14,
-                                              electricPowerY15,
-                                              electricPowerY16,
-                                              electricPowerY17};
+        electricPowerYTab = new GameObject[17];
 
-        electricPowerGTab = new GameObject[] {electricPowerG1,
-                                              electricPowerG2,
-                                              electricPowerG3,
-                                              electricPowerG4,
-                                              electricPowerG5,
-                                              electricPowerG6,
-                                              electricPowerG7,
-                                              electricPowerG8,
-                                              electricPowerG9,
-                                              electricPowerG10,
-                                              electricPowerG11,
-                                              electricPowerG12,
-                                              electricPowerG13};
+        electricPowerGTab = new GameObject[13];
 
         i = 0;
         y = 0;
@@ -254,6 +127,27 @@ public class RepairManager : MonoBehaviour {
         electricTimeR = 1f;
         electricTimeY = 1f;
         electricTimeG = 1f;
+        
+        for (int o = 0; o < 17; o++)
+        {
+            electricPowerBTab[o] = electricPowerBlue.transform.GetChild(o).gameObject;
+            electricPowerBTab[o].SetActive(false);
+        }
+        for (int p = 0; p < 17; p++)
+        {
+            electricPowerBTab[p] = electricPowerRed.transform.GetChild(p).gameObject;
+            electricPowerBTab[p].SetActive(false);
+        }
+        for (int q = 0; q < 17; q++)
+        {
+            electricPowerBTab[q] = electricPowerYellow.transform.GetChild(q).gameObject;
+            electricPowerBTab[q].SetActive(false);
+        }
+        for (int r = 0; r < 17; r++)
+        {
+            electricPowerBTab[r] = electricPowerGreen.transform.GetChild(r).gameObject;
+            electricPowerBTab[r].SetActive(false);
+        }
     }
 
     private void Update()
@@ -268,10 +162,12 @@ public class RepairManager : MonoBehaviour {
             if (electricTimeB <= 0 && i < 17)
             {
                 Debug.Log("electricBlue time");
-                electricPowerBlue.transform.GetChild(i).gameObject.SetActive(true);
+                //electricPowerBlue.transform.GetChild(i).gameObject.SetActive(true);
                 //electricPowerBTab[i].SetActive(true);
+                //electricPowerBTab[i] = electricPowerBlue.transform.GetChild(i).gameObject;
+                electricPowerBTab[i].SetActive(true);
                 i++;
-                electricTimeB = 0.5f;
+                electricTimeB = 1f;
             }
         }
 
