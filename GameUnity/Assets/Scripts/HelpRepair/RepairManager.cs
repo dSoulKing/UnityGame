@@ -5,6 +5,7 @@ using UnityEngine;
 public class RepairManager : MonoBehaviour {
 
     public GameObject rebackButtonRepair;
+    public GameObject computerCore;
 
     public GameObject electricPowerBlue;
     public GameObject electricPowerRed;
@@ -199,6 +200,7 @@ public class RepairManager : MonoBehaviour {
         if (i == 17 && y == 17 && w == 17 && z == 13)
         {
             rebackButtonRepair.SetActive(true);
+            computerCore.SetActive(true);
         }
     }
 }

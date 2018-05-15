@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour {
     public GameObject helpBubble;
     public GameObject exclamationPoint1;
     public GameObject exclamationPoint2;
+    public GameObject clickToSetUp1;
 
     public static bool boolComputer1;
     public static bool boolComputer2;
@@ -56,6 +57,8 @@ public class GameController : MonoBehaviour {
             {
                 Instantiate(worker1, positionWorker, Quaternion.identity);
                 timeNewWorker = 25f;
+
+                Instantiate(clickToSetUp1, clickToSetUp1.transform.position, clickToSetUp1.transform.rotation);
             }
             else if (numberWorker == 2)
             {
@@ -74,7 +77,6 @@ public class GameController : MonoBehaviour {
             numberExclamationPoint++;
             if (numberExclamationPoint == 1)
             {
-                Debug.Log(1);
                 exclamationPoint1 = (GameObject) Instantiate(exclamationPoint1, positionExclamationPoint, exclamationPoint1.transform.rotation);
                 Instantiate(helpBubble, positionHelpBubble, helpBubble.transform.rotation);
 
@@ -86,7 +88,6 @@ public class GameController : MonoBehaviour {
             }
             else if (numberExclamationPoint == 2)
             {
-                Debug.Log(2);
                 exclamationPoint2 = (GameObject) Instantiate(exclamationPoint2, positionExclamationPoint, exclamationPoint2.transform.rotation);
                 Instantiate(helpBubble, positionHelpBubble, helpBubble.transform.rotation);
 
