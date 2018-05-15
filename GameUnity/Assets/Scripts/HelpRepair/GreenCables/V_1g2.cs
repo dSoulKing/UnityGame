@@ -42,7 +42,7 @@ public class V_1g2 : MonoBehaviour {
 
     void Update()
     {
-        if (angle == -24.5)
+        if (angle == 335.5)
         {
             if (RepairManager.G_2g4)
             {
@@ -77,5 +77,6 @@ public class V_1g2 : MonoBehaviour {
         transform.Rotate(0, 0, 90);
         angle = transform.localEulerAngles.z;
         angle = Math.Round(angle, 1);
+        Debug.Log(angle);
     }
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RepairManager : MonoBehaviour {
 
-    public GameObject parent;
-    public GameObject computerCore;
+    public GameObject rebackButtonRepair;
 
     public GameObject electricPowerBlue;
     public GameObject electricPowerRed;
@@ -160,7 +159,7 @@ public class RepairManager : MonoBehaviour {
             {
                 electricPowerBTab[i].SetActive(true);
                 i++;
-                electricTimeB = 1f;
+                electricTimeB = 0.5f;
             }
         }
 
@@ -175,7 +174,7 @@ public class RepairManager : MonoBehaviour {
             }
         }
 
-        if (Y_2g1)
+        if (Y_4g1)
         {
             electricTimeY -= Time.deltaTime;
             if (electricTimeY <= 0 && w < 17)
@@ -199,7 +198,7 @@ public class RepairManager : MonoBehaviour {
 
         if (i == 17 && y == 17 && w == 17 && z == 13)
         {
-            computerCore.SetActive(true);
+            rebackButtonRepair.SetActive(true);
         }
     }
 }

@@ -42,7 +42,7 @@ public class V_2g1 : MonoBehaviour {
 
     void Update()
     {
-        if (angle == -24.5)
+        if (angle == 335.5)
         {
             if (RepairManager.G_2g2)
             {
