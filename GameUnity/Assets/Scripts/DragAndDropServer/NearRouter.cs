@@ -30,7 +30,7 @@ public class NearRouter : MonoBehaviour {
     {
         if (other.gameObject == GameObject.Find("Router"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 0, 1f);
+            thisCircle.GetComponent<SpriteRenderer>().sprite = blueCircle;
             nearCircle = true;
         }
     }
@@ -39,7 +39,7 @@ public class NearRouter : MonoBehaviour {
     {
         if (other.gameObject == GameObject.Find("Router"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0, 1f);
+            thisCircle.GetComponent<SpriteRenderer>().sprite = whiteCircle;
             nearCircle = false;
         }
     }
