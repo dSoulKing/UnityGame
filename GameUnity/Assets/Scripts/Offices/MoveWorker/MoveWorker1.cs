@@ -6,6 +6,10 @@ public class MoveWorker1 : MonoBehaviour {
 
     public GameObject workerMove1;
     public GameObject workerMove2;
+    public SpriteRenderer spriteWorker1;
+    public SpriteRenderer spriteWorker2;
+    public Sprite bigHead;
+
     public GameObject sphere0;
     public GameObject sphere1;
     public GameObject sphere2;
@@ -25,6 +29,7 @@ public class MoveWorker1 : MonoBehaviour {
     public GameObject sphere16;
     public GameObject sphere17;
     public GameObject sphere18;
+    public GameObject finalSit;
 
     private GameObject[] spheres;
     private int i;
@@ -51,7 +56,8 @@ public class MoveWorker1 : MonoBehaviour {
                                     sphere15,
                                     sphere16,
                                     sphere17,
-                                    sphere18};
+                                    sphere18,
+                                    finalSit};
         workerMove1.SetActive(false);
         workerMove1.transform.Rotate(0, -90, 0, Space.World);
         workerMove2.transform.Rotate(0, -90, 0, Space.World);
@@ -77,11 +83,23 @@ public class MoveWorker1 : MonoBehaviour {
             {
                 workerMove1.transform.Rotate(0, 90, 0, Space.World);
                 workerMove2.transform.Rotate(0, 90, 0, Space.World);
+                spriteWorker1.sprite = bigHead;
+                spriteWorker2.sprite = bigHead;
             }
             else if (i == 17)
             {
                 workerMove1.transform.Rotate(0, -90, 0, Space.World);
                 workerMove2.transform.Rotate(0, -90, 0, Space.World);
+            }
+            else if (i == 18)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
+            }
+            else if (i == 19)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
             }
 
             if (i%2 == 0)
