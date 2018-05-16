@@ -34,10 +34,12 @@ public class MoveWorker1 : MonoBehaviour {
     private GameObject[] spheres;
     private int i;
     private float timeToMove;
+    private float timeToTilt;
 
     void Start () {
         i = 0;
         timeToMove = 1f;
+        timeToTilt = 0f;
         spheres = new GameObject[] {sphere0, 
                                     sphere1, 
                                     sphere2, 
@@ -119,6 +121,16 @@ public class MoveWorker1 : MonoBehaviour {
                 timeToMove = 1f;
             }
             i++;
+        }
+        
+        if (i == spheres.Length)
+        {
+            timeToTilt -= Time.deltaTime;
+            if (timeToTilt <= 0)
+            {
+                GameController.malus++;
+                timeToTilt = 5f;
+            }
         }
 	}
 }

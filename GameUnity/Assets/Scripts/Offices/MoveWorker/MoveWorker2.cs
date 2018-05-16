@@ -7,6 +7,10 @@ public class MoveWorker2 : MonoBehaviour
 
     public GameObject workerMove1;
     public GameObject workerMove2;
+    public SpriteRenderer spriteWorker1;
+    public SpriteRenderer spriteWorker2;
+    public Sprite bigHead;
+
     public GameObject sphere0;
     public GameObject sphere1;
     public GameObject sphere2;
@@ -33,6 +37,7 @@ public class MoveWorker2 : MonoBehaviour
     public GameObject sphere23;
     public GameObject sphere24;
     public GameObject sphere25;
+    public GameObject finalSit;
 
     private GameObject[] spheres;
     private int i;
@@ -67,7 +72,8 @@ public class MoveWorker2 : MonoBehaviour
                                     sphere22,
                                     sphere23,
                                     sphere24,
-                                    sphere25};
+                                    sphere25,
+                                    finalSit};
 
         workerMove1.SetActive(false);
         workerMove1.transform.Rotate(0, -90, 0, Space.World);
@@ -91,10 +97,25 @@ public class MoveWorker2 : MonoBehaviour
                 workerMove1.transform.Rotate(0, 90, 0, Space.World);
                 workerMove2.transform.Rotate(0, 90, 0, Space.World);
             }
+            else if (i == 22)
+            {
+                spriteWorker1.sprite = bigHead;
+                spriteWorker2.sprite = bigHead;
+            }
             else if (i == 23)
             {
                 workerMove1.transform.Rotate(0, -90, 0, Space.World);
                 workerMove2.transform.Rotate(0, -90, 0, Space.World);
+            }
+            else if (i == 25)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
+            }
+            else if (i == 26)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
             }
 
             if (i % 2 == 0)

@@ -11,9 +11,12 @@ public class GameController : MonoBehaviour {
     public GameObject exclamationPoint1;
     public GameObject exclamationPoint2;
     public GameObject clickToSetUp1;
+    public GameObject clickToSetUp2;
 
     public static bool boolComputer1;
     public static bool boolComputer2;
+
+    public static int malus;
 
     private Vector3 positionWorker;
     private Vector3 positionExclamationPoint;
@@ -64,6 +67,8 @@ public class GameController : MonoBehaviour {
             {
                 Instantiate(worker2, positionWorker, Quaternion.identity);
                 timeNewWorker = 15f;
+
+                Instantiate(clickToSetUp2, clickToSetUp2.transform.position, clickToSetUp2.transform.rotation);
             }
             else if (numberWorker == 3)
             {
