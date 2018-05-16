@@ -3418,7 +3418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worker1: {fileID: 1649459786689602, guid: a4d48794a29249e49b9dbcc76af5e90e, type: 2}
   worker2: {fileID: 1138100576034194, guid: 3489119074450054f84f87cfbb19a586, type: 2}
-  worker3: {fileID: 1202457003638898, guid: 421e188921d4b68498c31234c3a27420, type: 2}
+  worker3: {fileID: 1010819768611848, guid: 421e188921d4b68498c31234c3a27420, type: 2}
   helpBubble: {fileID: 1048546732272494, guid: 0bb3d6fbd16c08d42a38e9c0e0dd4091, type: 2}
   exclamationPoint1: {fileID: 1862666525778930, guid: c608c19e117b8ff4493283201e73359e,
     type: 2}
