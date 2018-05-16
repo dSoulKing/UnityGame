@@ -10,6 +10,8 @@ public class MoveWorker1 : MonoBehaviour {
     public SpriteRenderer spriteWorker2;
     public Sprite bigHead;
 
+    public GameObject warning;
+
     public GameObject sphere0;
     public GameObject sphere1;
     public GameObject sphere2;
@@ -122,8 +124,8 @@ public class MoveWorker1 : MonoBehaviour {
             }
             i++;
         }
-        
-        if (i == spheres.Length)
+
+        if (i == spheres.Length && GameController.boolSetUp1)
         {
             timeToTilt -= Time.deltaTime;
             if (timeToTilt <= 0)
@@ -131,6 +133,9 @@ public class MoveWorker1 : MonoBehaviour {
                 GameController.malus++;
                 timeToTilt = 5f;
             }
+            warning.SetActive(true);
         }
+        else
+            warning.SetActive(false);
 	}
 }

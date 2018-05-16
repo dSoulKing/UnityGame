@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour {
     public static bool boolComputer1;
     public static bool boolComputer2;
 
+    public static bool boolSetUp1;
+    public static bool boolSetUp2;
+    public static bool boolSetUp3;
     public static int malus;
 
     private Vector3 positionWorker;
@@ -31,6 +34,9 @@ public class GameController : MonoBehaviour {
 
     void Start()
     {
+        boolSetUp1 = true;
+        boolSetUp2 = true;
+        boolSetUp3 = true;
         timeNewWorker = 5f;
         timeNewHelp = 15f;
 

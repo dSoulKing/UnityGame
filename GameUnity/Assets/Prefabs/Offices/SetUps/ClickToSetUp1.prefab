@@ -163,6 +163,7 @@ MonoBehaviour:
   c75: {fileID: 21300000, guid: a0672bc7193c597468d059bef4ca6f19, type: 3}
   c87: {fileID: 21300000, guid: 7408f20378a7fe140ada655a53de39fb, type: 3}
   c100: {fileID: 21300000, guid: 332fc9b0e55b67b4ba1b91a6f8f89e8c, type: 3}
+  thisSetUp: {fileID: 1058831127695232}
 --- !u!212 &212772135816797860
 SpriteRenderer:
   m_ObjectHideFlags: 1

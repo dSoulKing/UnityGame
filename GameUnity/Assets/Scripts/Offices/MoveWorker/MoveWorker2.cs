@@ -11,6 +11,8 @@ public class MoveWorker2 : MonoBehaviour
     public SpriteRenderer spriteWorker2;
     public Sprite bigHead;
 
+    public GameObject warning;
+
     public GameObject sphere0;
     public GameObject sphere1;
     public GameObject sphere2;
@@ -42,11 +44,13 @@ public class MoveWorker2 : MonoBehaviour
     private GameObject[] spheres;
     private int i;
     private float timeToMove;
+    private float timeToTilt;
 
     void Start()
     {
         i = 0;
         timeToMove = 0.3f;
+        timeToTilt = 0f;
         spheres = new GameObject[] {sphere0,
                                     sphere1,
                                     sphere2,
@@ -136,7 +140,19 @@ public class MoveWorker2 : MonoBehaviour
             }
             i++;
         }
-        
+
+        if (i == spheres.Length && GameController.boolSetUp2)
+        {
+            timeToTilt -= Time.deltaTime;
+            if (timeToTilt <= 0)
+            {
+                GameController.malus++;
+                timeToTilt = 5f;
+            }
+            warning.SetActive(true);
+        }
+        else
+            warning.SetActive(false);
     }
 }
 

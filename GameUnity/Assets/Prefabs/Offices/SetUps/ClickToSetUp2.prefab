@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792077522821424}
   - component: {fileID: 65346405341331490}
-  - component: {fileID: 114263813808245408}
+  - component: {fileID: 114541821691807110}
   m_Layer: 0
   m_Name: ClickComputer
   m_TagString: Untagged
@@ -142,7 +142,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114263813808245408
+--- !u!114 &114541821691807110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048526961966120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12d31bcde5020224e9711365bf7f54ea, type: 3}
+  m_Script: {fileID: 11500000, guid: e5fc47c0c4f1ccf4083341e2f64b298b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chargement: {fileID: 212151765070381746}
@@ -163,6 +163,7 @@ MonoBehaviour:
   c75: {fileID: 21300000, guid: a0672bc7193c597468d059bef4ca6f19, type: 3}
   c87: {fileID: 21300000, guid: 7408f20378a7fe140ada655a53de39fb, type: 3}
   c100: {fileID: 21300000, guid: 332fc9b0e55b67b4ba1b91a6f8f89e8c, type: 3}
+  thisSetUp: {fileID: 1909492167208512}
 --- !u!212 &212151765070381746
 SpriteRenderer:
   m_ObjectHideFlags: 1

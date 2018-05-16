@@ -7,6 +7,13 @@ public class MoveWorker3 : MonoBehaviour
 
     public GameObject workerMove1;
     public GameObject workerMove2;
+    public SpriteRenderer spriteWorker1;
+    public SpriteRenderer spriteWorker2;
+    public Sprite bigHead;
+    public GameObject clickToSetUp3;
+
+    public GameObject warning;
+
     public GameObject sphere0;
     public GameObject sphere1;
     public GameObject sphere2;
@@ -21,15 +28,18 @@ public class MoveWorker3 : MonoBehaviour
     public GameObject sphere11;
     public GameObject sphere12;
     public GameObject sphere13;
+    public GameObject finalSit;
 
     private GameObject[] spheres;
     private int i;
     private float timeToMove;
+    private float timeToTilt;
 
     void Start()
     {
         i = 0;
         timeToMove = 4f;
+        timeToTilt = 0f;
         spheres = new GameObject[] {sphere0,
                                     sphere1,
                                     sphere2,
@@ -43,7 +53,8 @@ public class MoveWorker3 : MonoBehaviour
                                     sphere10,
                                     sphere11,
                                     sphere12,
-                                    sphere13};
+                                    sphere13,
+                                    finalSit};
 
         workerMove1.SetActive(false);
         workerMove1.transform.Rotate(0, -90, 0, Space.World);
@@ -62,12 +73,28 @@ public class MoveWorker3 : MonoBehaviour
                 workerMove1.transform.Rotate(0, 90, 0, Space.World);
                 workerMove2.transform.Rotate(0, 90, 0, Space.World);
             }
+            else if (i == 9)
+            {
+                spriteWorker1.sprite = bigHead;
+                spriteWorker2.sprite = bigHead;
+                Instantiate(clickToSetUp3, clickToSetUp3.transform.position, clickToSetUp3.transform.rotation);
+            }
             else if (i == 10)
             {
                 workerMove1.transform.Rotate(0, -90, 0, Space.World);
                 workerMove2.transform.Rotate(0, -90, 0, Space.World);
             }
             else if (i == 12)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
+            }
+            else if (i == 13)
+            {
+                workerMove1.transform.Rotate(0, 90, 0, Space.World);
+                workerMove2.transform.Rotate(0, 90, 0, Space.World);
+            }
+            else if (i == 14)
             {
                 workerMove1.transform.Rotate(0, 90, 0, Space.World);
                 workerMove2.transform.Rotate(0, 90, 0, Space.World);
@@ -91,7 +118,19 @@ public class MoveWorker3 : MonoBehaviour
             }
             i++;
         }
-        
+
+        if (i == spheres.Length && GameController.boolSetUp3)
+        {
+            timeToTilt -= Time.deltaTime;
+            if (timeToTilt <= 0)
+            {
+                GameController.malus++;
+                timeToTilt = 5f;
+            }
+            warning.SetActive(true);
+        }
+        else
+            warning.SetActive(false);
     }
 }
 
