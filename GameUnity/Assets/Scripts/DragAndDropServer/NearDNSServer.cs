@@ -28,10 +28,9 @@ public class NearDNSServer : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("trigger enter");
         if (other.gameObject == GameObject.Find("DNSServer"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().sprite = blueCircle;
+            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 0, 1f);
             nearCircle = true;
         }
     }
@@ -40,7 +39,7 @@ public class NearDNSServer : MonoBehaviour {
     {
         if (other.gameObject == GameObject.Find("DNSServer"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().sprite = whiteCircle;
+            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0, 1f);
             nearCircle = false;
         }
     }

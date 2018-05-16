@@ -30,7 +30,7 @@ public class NearStorageServer : MonoBehaviour {
     {
         if (other.gameObject == GameObject.Find("StorageServer"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().sprite = blueCircle;
+            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 0, 1f);
             nearCircle = true;
         }
     }
@@ -39,7 +39,7 @@ public class NearStorageServer : MonoBehaviour {
     {
         if (other.gameObject == GameObject.Find("StorageServer"))
         {
-            thisCircle.GetComponent<SpriteRenderer>().sprite = whiteCircle;
+            thisCircle.GetComponent<SpriteRenderer>().color = new Color(1f, 0, 0, 1f);
             nearCircle = false;
         }
     }
