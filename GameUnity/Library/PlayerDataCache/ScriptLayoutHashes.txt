@@ -186,6 +186,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+7bdd71fff980bb38968d2f8da56311d1 Assembly-CSharp.dll:.TongueMenu
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_6g1
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_2g2
@@ -224,4 +225,3 @@ b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof4Clicked
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_5g1
 b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof13Clicked
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_5g1
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TongueMenu
