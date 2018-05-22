@@ -31,6 +31,7 @@ public class Computer1 : MonoBehaviour {
             Instantiate(allVirus, allVirus.transform.position, allVirus.transform.rotation);
 
             VirusManager.virusStart = true;
+            GameController.gamePause = true;
         }
     }
 }

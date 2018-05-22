@@ -13,7 +13,6 @@ public class MoveVirus : MonoBehaviour
 
     private SpriteRenderer virusRenderer;
     private bool stop;
-    private GameObject circleTarget;
     private GameObject thisVirus;
     private float rotationsPerMinute = 10f;
 

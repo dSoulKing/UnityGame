@@ -8,9 +8,11 @@ public class Roof5Clicked : MonoBehaviour {
     public GameObject thisRoof;
 
     public static bool cam5;
+    public static bool eP2;
 
     void Start()
     {
+        eP2 = true;
         mainCamera.gameObject.SetActive(true);
         mainCamera.orthographic = true;
         thisRoof.SetActive(true);
@@ -25,12 +27,14 @@ public class Roof5Clicked : MonoBehaviour {
         if (cam5 == false)
         {
             thisRoof.SetActive(false);
-            gameController.exclamationPoint2.SetActive(false);
+            if(eP2)
+                gameController.exclamationPoint2.SetActive(false);
         }
         else if (cam5 == true)
         {
             thisRoof.SetActive(true);
-            gameController.exclamationPoint2.SetActive(true);
+            if(eP2)
+                gameController.exclamationPoint2.SetActive(true);
         }
     }
 

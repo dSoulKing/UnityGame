@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
@@ -19,7 +20,10 @@ public class GameController : MonoBehaviour {
     public static bool boolSetUp1;
     public static bool boolSetUp2;
     public static bool boolSetUp3;
-    public static int malus;
+
+    public static bool gamePause;
+    public static int totalPoints;
+    public Text pointText;
 
     private Vector3 positionWorker;
     private Vector3 positionExclamationPoint;
@@ -30,7 +34,6 @@ public class GameController : MonoBehaviour {
     private int numberWorker;
     private int numberExclamationPoint;
     
-    
 
     void Start()
     {
@@ -39,6 +42,10 @@ public class GameController : MonoBehaviour {
         boolSetUp3 = true;
         timeNewWorker = 5f;
         timeNewHelp = 15f;
+
+        gamePause = false;
+        totalPoints = 100;
+        pointText.text = "Point :\n" + totalPoints + "/100";
 
         numberWorker = 0;
         numberExclamationPoint = 0;
@@ -53,7 +60,7 @@ public class GameController : MonoBehaviour {
 
     void Update()
     {
-        if (MenuStart.begin)
+        if (MenuStart.begin && !gamePause)
         {
             timeNewWorker -= Time.deltaTime;
             timeNewHelp -= Time.deltaTime;
@@ -110,4 +117,8 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    public void updateScore()
+    {
+        pointText.text = "Point :\n" + totalPoints + "/100";
+    }
 }

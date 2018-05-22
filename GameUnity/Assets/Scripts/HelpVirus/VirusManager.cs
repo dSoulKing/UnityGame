@@ -57,7 +57,6 @@ public class VirusManager : MonoBehaviour {
             }
             active = false;
             rebackButtonVirus.SetActive(true);
-            //Instantiate(rebackButtonVirus, rebackButtonVirus.transform.position, rebackButtonVirus.transform.rotation);
             computerLife = -1;
         }
         /*else
@@ -142,6 +141,5 @@ public class VirusManager : MonoBehaviour {
 
         if (nbVirus == 30)
             rebackButtonVirus.SetActive(true);
-            //Instantiate(rebackButtonVirus, rebackButtonVirus.transform.position, rebackButtonVirus.transform.rotation);
     }
 }

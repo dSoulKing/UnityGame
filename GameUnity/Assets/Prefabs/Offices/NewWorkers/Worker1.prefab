@@ -1581,26 +1581,7 @@ MonoBehaviour:
   spriteWorker2: {fileID: 212511112103515106}
   bigHead: {fileID: 21300000, guid: c09774b8f0271e847bf27de4c4beeef1, type: 3}
   warning: {fileID: 1975281803527456}
-  sphere0: {fileID: 1409493184440104}
-  sphere1: {fileID: 1700707002362322}
-  sphere2: {fileID: 1044636220015328}
-  sphere3: {fileID: 1822789148044800}
-  sphere4: {fileID: 1472490503872022}
-  sphere5: {fileID: 1101666925517002}
-  sphere6: {fileID: 1564748159459494}
-  sphere7: {fileID: 1297593812776028}
-  sphere8: {fileID: 1132057886381790}
-  sphere9: {fileID: 1283851092111032}
-  sphere10: {fileID: 1248894052371922}
-  sphere11: {fileID: 1313635295763318}
-  sphere12: {fileID: 1770562749287024}
-  sphere13: {fileID: 1334323913617942}
-  sphere14: {fileID: 1693520063849910}
-  sphere15: {fileID: 1150746202127692}
-  sphere16: {fileID: 1804277855504320}
-  sphere17: {fileID: 1331509295301962}
-  sphere18: {fileID: 1021332317352476}
-  finalSit: {fileID: 1917659217622628}
+  travel1: {fileID: 1371301789986376}
 --- !u!212 &212281443192951066
 SpriteRenderer:
   m_ObjectHideFlags: 1

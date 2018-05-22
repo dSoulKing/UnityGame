@@ -14,21 +14,7 @@ public class MoveWorker3 : MonoBehaviour
 
     public GameObject warning;
 
-    public GameObject sphere0;
-    public GameObject sphere1;
-    public GameObject sphere2;
-    public GameObject sphere3;
-    public GameObject sphere4;
-    public GameObject sphere5;
-    public GameObject sphere6;
-    public GameObject sphere7;
-    public GameObject sphere8;
-    public GameObject sphere9;
-    public GameObject sphere10;
-    public GameObject sphere11;
-    public GameObject sphere12;
-    public GameObject sphere13;
-    public GameObject finalSit;
+    public GameObject travel3;
 
     private GameObject[] spheres;
     private int i;
@@ -40,31 +26,23 @@ public class MoveWorker3 : MonoBehaviour
         i = 0;
         timeToMove = 4f;
         timeToTilt = 0f;
-        spheres = new GameObject[] {sphere0,
-                                    sphere1,
-                                    sphere2,
-                                    sphere3,
-                                    sphere4,
-                                    sphere5,
-                                    sphere6,
-                                    sphere7,
-                                    sphere8,
-                                    sphere9,
-                                    sphere10,
-                                    sphere11,
-                                    sphere12,
-                                    sphere13,
-                                    finalSit};
+        spheres = new GameObject[15];
 
         workerMove1.SetActive(false);
         workerMove1.transform.Rotate(0, -90, 0, Space.World);
         workerMove2.transform.Rotate(0, -90, 0, Space.World);
+
+        for (int y = 0; y < 15; y++)
+        {
+            spheres[y] = travel3.transform.GetChild(y).gameObject;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeToMove -= Time.deltaTime;
+        if (!GameController.gamePause)
+            timeToMove -= Time.deltaTime;
 
         if (timeToMove <= 0 && i < spheres.Length)
         {
@@ -119,12 +97,15 @@ public class MoveWorker3 : MonoBehaviour
             i++;
         }
 
-        if (i == spheres.Length && GameController.boolSetUp3)
+        if (i == spheres.Length && GameController.boolSetUp3 && !GameController.gamePause)
         {
             timeToTilt -= Time.deltaTime;
             if (timeToTilt <= 0)
             {
-                GameController.malus++;
+                GameController.totalPoints--;
+                GameObject gameControllerObject = GameObject.Find("GameController");
+                GameController gameController = gameControllerObject.GetComponent<GameController>();
+                gameController.updateScore();
                 timeToTilt = 5f;
             }
             warning.SetActive(true);

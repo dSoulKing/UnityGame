@@ -1237,21 +1237,7 @@ MonoBehaviour:
   clickToSetUp3: {fileID: 1408051832255228, guid: 0bd09f7174a0d9a44a9a24548f0ae280,
     type: 2}
   warning: {fileID: 1516979891277218}
-  sphere0: {fileID: 1532795713699306}
-  sphere1: {fileID: 1720272092566138}
-  sphere2: {fileID: 1871719976909208}
-  sphere3: {fileID: 1719853608491608}
-  sphere4: {fileID: 1826447096180816}
-  sphere5: {fileID: 1165723534793882}
-  sphere6: {fileID: 1834101187564428}
-  sphere7: {fileID: 1028402980131048}
-  sphere8: {fileID: 1794682300100480}
-  sphere9: {fileID: 1729969825227690}
-  sphere10: {fileID: 1096271928983518}
-  sphere11: {fileID: 1167927202590340}
-  sphere12: {fileID: 1506826810406462}
-  sphere13: {fileID: 1235958697040494}
-  finalSit: {fileID: 1452024057336358}
+  travel3: {fileID: 1778946279459262}
 --- !u!135 &135013422527286664
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -18,6 +18,7 @@ public class Computer3 : MonoBehaviour {
         mainCamera.transform.Rotate(-90, 0, 0);
 
         InputManager.inputON = true;
+        GameController.gamePause = true;
     }
 
     

@@ -3590,6 +3590,7 @@ MonoBehaviour:
     type: 2}
   clickToSetUp2: {fileID: 1909492167208512, guid: f6ab752b58204a04d90982541c998b0d,
     type: 2}
+  pointText: {fileID: 1356507831}
 --- !u!4 &693388916
 Transform:
   m_ObjectHideFlags: 0
@@ -6025,7 +6026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9363426b8165f3341ae23c495261ef4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allRepair: {fileID: 1310279071931202, guid: 1fe463d25f0a0f94f83c144388015827, type: 2}
+  allRepair: {fileID: 1830382985809562, guid: 1fe463d25f0a0f94f83c144388015827, type: 2}
 --- !u!65 &1178390052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7014,7 +7015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.5, y: -15}
+  m_AnchoredPosition: {x: -5, y: -35}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1356507831
@@ -7038,7 +7039,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 33
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -7049,7 +7050,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Malus
+  m_Text: 'Point :
+
+    100/100'
 --- !u!222 &1356507832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8513,7 +8516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc56f961d45a1340968dd627a79d062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allVirus: {fileID: 1323529853679900, guid: 5c42f002dac704c468dba2f5c7587c5a, type: 2}
+  allVirus: {fileID: 1715076778744172, guid: 5c42f002dac704c468dba2f5c7587c5a, type: 2}
 --- !u!65 &1571155659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9923,9 +9926,26 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.04
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114050737929228332, guid: f9dbd4ca7af08b440a474bb40817652b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f9dbd4ca7af08b440a474bb40817652b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1767753967 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1020081990325414, guid: f9dbd4ca7af08b440a474bb40817652b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767753966}
+--- !u!114 &1767753968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767753967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ed74ff85498914fa181eb909200727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1782724913
 Prefab:
   m_ObjectHideFlags: 0

@@ -2112,33 +2112,7 @@ MonoBehaviour:
   spriteWorker2: {fileID: 212988245187223992}
   bigHead: {fileID: 21300000, guid: c09774b8f0271e847bf27de4c4beeef1, type: 3}
   warning: {fileID: 1381736275927970}
-  sphere0: {fileID: 1677803035446388}
-  sphere1: {fileID: 1121618120586676}
-  sphere2: {fileID: 1888107102041892}
-  sphere3: {fileID: 1619423276561268}
-  sphere4: {fileID: 1192217635809518}
-  sphere5: {fileID: 1639558270147894}
-  sphere6: {fileID: 1729463730372568}
-  sphere7: {fileID: 1961209986374572}
-  sphere8: {fileID: 1488963503860672}
-  sphere9: {fileID: 1535062085043140}
-  sphere10: {fileID: 1430485914877960}
-  sphere11: {fileID: 1197923627495584}
-  sphere12: {fileID: 1579144953908464}
-  sphere13: {fileID: 1340509398336106}
-  sphere14: {fileID: 1617681549030962}
-  sphere15: {fileID: 1011049728177590}
-  sphere16: {fileID: 1557904533205120}
-  sphere17: {fileID: 1378555469814146}
-  sphere18: {fileID: 1029446418307112}
-  sphere19: {fileID: 1384129966727274}
-  sphere20: {fileID: 1616717501882250}
-  sphere21: {fileID: 1433400898981094}
-  sphere22: {fileID: 1396904368114698}
-  sphere23: {fileID: 1232893355310834}
-  sphere24: {fileID: 1783029190363000}
-  sphere25: {fileID: 1393224113919382}
-  finalSit: {fileID: 1922317756990398}
+  travel2: {fileID: 1367618015382164}
 --- !u!135 &135022842897515982
 SphereCollider:
   m_ObjectHideFlags: 1

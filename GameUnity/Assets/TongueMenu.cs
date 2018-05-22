@@ -20,5 +20,6 @@ public class TongueMenu : MonoBehaviour, IPointerDownHandler {
         isOpen = !isOpen;
         Debug.Log(isOpen);
         animator.SetBool("isOpen", isOpen);
+        GameController.gamePause = !GameController.gamePause;
     }
 }
