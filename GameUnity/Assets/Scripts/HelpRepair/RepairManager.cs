@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RepairManager : MonoBehaviour {
 
@@ -53,7 +55,9 @@ public class RepairManager : MonoBehaviour {
     public static bool G_2g3;
     public static bool G_2g4;
 
-    //public static bool repairStart;
+    public static bool repairStart = false;
+
+    public static String timerText;
 
     private GameObject[] electricPowerBTab;
     private GameObject[] electricPowerRTab;
@@ -67,6 +71,8 @@ public class RepairManager : MonoBehaviour {
     private int y;
     private int w;
     private int z;
+    private double timer;
+
 
     private void Start()
     {
@@ -148,10 +154,18 @@ public class RepairManager : MonoBehaviour {
             electricPowerGTab[r] = electricPowerGreen.transform.GetChild(r).gameObject;
             electricPowerGTab[r].SetActive(false);
         }
+
+        timer = 60;
     }
 
     private void Update()
     {
+        if (repairStart)
+        {
+            timer -= Time.deltaTime;
+            timer = Math.Round(timer, 1);
+            timerText = "" + timer;
+        }
 
         if (B_7g1)
         {
@@ -201,6 +215,12 @@ public class RepairManager : MonoBehaviour {
         {
             rebackButtonRepair.SetActive(true);
             computerCore.SetActive(true);
+        }
+        if (timer <= 0)
+        {
+            GameController.totalPoints -= 10;
+            RebackRepair rebackRepair = rebackButtonRepair.GetComponent<RebackRepair>();
+            rebackRepair.OnMouseDown();
         }
     }
 }

@@ -22,6 +22,7 @@ public class VirusManager : MonoBehaviour {
     private bool active = true;
     private int nbVirus;
     private int random;
+    private bool losePointOk = true;
     
 	void Start () {
         timeNewVirus = 5f;
@@ -35,7 +36,6 @@ public class VirusManager : MonoBehaviour {
     }
 	
 	void Update () {
-
         if (enter)
             backgroundComputer.color = new Color(1F, 0.2F, 0.2F, 1F);
         else
@@ -55,9 +55,9 @@ public class VirusManager : MonoBehaviour {
             {
                 Destroy(virus[i]);
             }
-            active = false;
             rebackButtonVirus.SetActive(true);
-            GameController.totalPoints -= 10;
+            LosePoints();
+            active = false;
         }
         /*else
             computerLifeText.text = "Vies restantes : " + computerLife;*/
@@ -141,5 +141,14 @@ public class VirusManager : MonoBehaviour {
 
         if (nbVirus == 30)
             rebackButtonVirus.SetActive(true);
+    }
+
+    private void LosePoints()
+    {
+        if (losePointOk)
+        {
+            GameController.totalPoints -= 10;
+            losePointOk = false;
+        }
     }
 }

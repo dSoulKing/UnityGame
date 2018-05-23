@@ -8,7 +8,7 @@ public class RebackRepair : MonoBehaviour {
 
     private Camera mainCamera;
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         mainCamera = Camera.main;
 
@@ -22,6 +22,7 @@ public class RebackRepair : MonoBehaviour {
 
         GameController.gamePause = false;
         GameController.boolComputer2 = false;
+        RepairManager.repairStart = false;
 
         Destroy(allRepair);
     }

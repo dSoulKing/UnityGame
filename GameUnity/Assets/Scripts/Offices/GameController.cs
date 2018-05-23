@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour {
     public GameObject clickToSetUp1;
     public GameObject clickToSetUp2;
 
+    public GameObject timerTextObject;
+    public Text timerText;
+
     public static bool boolComputer1;
     public static bool boolComputer2;
 
@@ -120,26 +123,33 @@ public class GameController : MonoBehaviour {
             }
         }
 
-        if (boolComputer1)
+        if (boolComputer1 && !VirusManager.virusStart)
             eP1Malus -= Time.deltaTime;
-        if (boolComputer2)
+        if (boolComputer2 && !RepairManager.repairStart)
             eP2Malus -= Time.deltaTime;
         if (eP1Malus <= 0)
         {
-            totalPoints--;
             updateScore();
             eP1Malus = 5;
         }
         if (eP2Malus <= 0)
         {
-            totalPoints--;
             updateScore();
             eP2Malus = 5;
+        }
+
+        if (!boolComputer2)
+            timerTextObject.SetActive(false);
+        else
+        {
+            timerTextObject.SetActive(true);
+            timerText.text = RepairManager.timerText;
         }
     }
 
     public void updateScore()
     {
+        totalPoints--;
         pointText.text = "Point :\n" + totalPoints + "/100";
     }
 }
