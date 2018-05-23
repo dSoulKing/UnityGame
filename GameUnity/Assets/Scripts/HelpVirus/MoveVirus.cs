@@ -42,7 +42,7 @@ public class MoveVirus : MonoBehaviour
         {
             virusRenderer.sprite = greenExplosion;
             Destroy(thisVirus);
-            VirusManager.computerLife -= 1;
+            VirusManager.computerLife--;
             VirusManager.enter = false;
         }
 

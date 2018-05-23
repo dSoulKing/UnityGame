@@ -21,6 +21,7 @@ public class RebackRepair : MonoBehaviour {
         groundBack.SetActiveAll();
 
         GameController.gamePause = false;
+        GameController.boolComputer2 = false;
 
         Destroy(allRepair);
     }

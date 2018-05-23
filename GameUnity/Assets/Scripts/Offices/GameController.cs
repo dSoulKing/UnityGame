@@ -33,7 +33,9 @@ public class GameController : MonoBehaviour {
     private float timeNewHelp;
     private int numberWorker;
     private int numberExclamationPoint;
-    
+    private float eP1Malus;
+    private float eP2Malus;
+
 
     void Start()
     {
@@ -42,6 +44,8 @@ public class GameController : MonoBehaviour {
         boolSetUp3 = true;
         timeNewWorker = 5f;
         timeNewHelp = 15f;
+        eP1Malus = 5;
+        eP2Malus = 5;
 
         gamePause = false;
         totalPoints = 100;
@@ -114,6 +118,23 @@ public class GameController : MonoBehaviour {
                 
                 boolComputer2 = true;
             }
+        }
+
+        if (boolComputer1)
+            eP1Malus -= Time.deltaTime;
+        if (boolComputer2)
+            eP2Malus -= Time.deltaTime;
+        if (eP1Malus <= 0)
+        {
+            totalPoints--;
+            updateScore();
+            eP1Malus = 5;
+        }
+        if (eP2Malus <= 0)
+        {
+            totalPoints--;
+            updateScore();
+            eP2Malus = 5;
         }
     }
 

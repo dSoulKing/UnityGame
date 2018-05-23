@@ -57,7 +57,7 @@ public class VirusManager : MonoBehaviour {
             }
             active = false;
             rebackButtonVirus.SetActive(true);
-            computerLife = -1;
+            GameController.totalPoints -= 10;
         }
         /*else
             computerLifeText.text = "Vies restantes : " + computerLife;*/

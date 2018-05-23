@@ -19,8 +19,9 @@ public class RebackVirus : MonoBehaviour {
         GameObject groundBackObject = GameObject.Find("GroundBack");
         GroundBack groundBack = groundBackObject.GetComponent<GroundBack>();
         groundBack.SetActiveAll();
-
+       
         GameController.gamePause = false;
+        GameController.boolComputer1 = false;
 
         Destroy(allVirus);
     }
