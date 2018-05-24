@@ -16,7 +16,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 9ca6347af5ceb6b0d1c105af31b6722e UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 70c6821f19690200e499c5c5ec0123df Assembly-CSharp.dll:.B_2g4
-4ebe2f07cb015f204df2b3d77509a06f Assembly-CSharp.dll:.MoveWorker1
+caac233f777cfd51161e444f35eac1b6 Assembly-CSharp.dll:.MoveWorker1
 7e8c7cfb3ea355aa62c26d59b8184294 Assembly-CSharp.dll:.ClickToSetUp2
 476ac8a8a09dd8c3bb5a10983ef7a30d Assembly-CSharp.dll:.NearUser
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_2g4
@@ -132,7 +132,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 b82f90d6d745fc911a205b66b74ce69b Assembly-CSharp.dll:.GroundBack
 b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.RoofServersClicked
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_8g1
-848084f72b58ef1276233f26c6c02b15 Assembly-CSharp.dll:.MoveWorker3
+2a4c4c4368dab341926b82de09247423 Assembly-CSharp.dll:.MoveWorker3
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -161,7 +161,7 @@ b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof5Clicked
 7e8c7cfb3ea355aa62c26d59b8184294 Assembly-CSharp.dll:.ClickToSetUp3
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_2g1
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_1g1
-22a3476f4a50d6595e41438ddc09c5d6 Assembly-CSharp.dll:.MoveWorker2
+4777e7993cad8a770f1e1c67516b3dc8 Assembly-CSharp.dll:.MoveWorker2
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_4g2
 b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof12Clicked
 70c6821f19690200e499c5c5ec0123df Assembly-CSharp.dll:.B_2g2
@@ -186,14 +186,14 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
-7bdd71fff980bb38968d2f8da56311d1 Assembly-CSharp.dll:.TongueMenu
+af47f3d94cf38f226a648930b333536b Assembly-CSharp.dll:.TongueMenu
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_6g1
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_2g2
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 476ac8a8a09dd8c3bb5a10983ef7a30d Assembly-CSharp.dll:.NearSwitch
 a2ddf5024b49350cda30fdace66d206d Assembly-CSharp.dll:.Computer2
-dd4f48489e22fa47d44febbf034be59c Assembly-CSharp.dll:.GameController
+6d4dd84e145258340698dfa2c0e1e2c9 Assembly-CSharp.dll:.GameController
 68cbe7e068b5ca8317185c6362e0ff24 Assembly-CSharp.dll:.V_1g1
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
@@ -224,4 +224,5 @@ b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof3Clicked
 b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof4Clicked
 6aca494be36d7cea6d7807c777c5403e Assembly-CSharp.dll:.Y_5g1
 b53332bbd61ef1af115b78aeaeb12dd0 Assembly-CSharp.dll:.Roof13Clicked
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RebackServer
 1494739b893a825c478c0274fbf04dc7 Assembly-CSharp.dll:.R_5g1
