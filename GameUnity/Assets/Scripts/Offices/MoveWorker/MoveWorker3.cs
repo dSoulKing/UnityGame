@@ -99,7 +99,6 @@ public class MoveWorker3 : MonoBehaviour
 
         if (i == spheres.Length && GameController.boolSetUp3 && !GameController.gamePause)
         {
-            timeToTilt -= Time.deltaTime;
             if (timeToTilt <= 0)
             {
                 GameController.totalPoints--;
@@ -109,6 +108,7 @@ public class MoveWorker3 : MonoBehaviour
                 timeToTilt = 5f;
             }
             warning.SetActive(true);
+            timeToTilt -= Time.deltaTime;
         }
         else
             warning.SetActive(false);

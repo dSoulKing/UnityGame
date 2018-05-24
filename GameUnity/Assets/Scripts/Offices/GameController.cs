@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour {
 
                 timeNewHelp = 20f;
                 positionExclamationPoint = new Vector3(22.5f, 2.22f, 10.5f);
-                positionHelpBubble = new Vector3(23.725f, 1, 10.814f);
+                positionHelpBubble = new Vector3(22.397f, 1, 12.773f);
 
                 boolComputer1 = true;
             }

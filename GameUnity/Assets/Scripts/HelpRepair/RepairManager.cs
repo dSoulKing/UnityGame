@@ -72,6 +72,7 @@ public class RepairManager : MonoBehaviour {
     private int w;
     private int z;
     private double timer;
+    private bool repairOK;
 
 
     private void Start()
@@ -156,15 +157,19 @@ public class RepairManager : MonoBehaviour {
         }
 
         timer = 60;
+        repairOK = false;
     }
 
     private void Update()
     {
-        if (repairStart)
+        if (repairStart && timer >= 0 && !repairOK)
         {
             timer -= Time.deltaTime;
-            timer = Math.Round(timer, 1);
-            timerText = "" + timer;
+            timerText = timer.ToString("F1");
+        }
+        if (B_7g1 && R_1g1 && Y_4g1 && G_1g1)
+        {
+            repairOK = true;
         }
 
         if (B_7g1)
