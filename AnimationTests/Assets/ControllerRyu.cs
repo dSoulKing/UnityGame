@@ -18,8 +18,12 @@ public class ControllerRyu : MonoBehaviour {
         if (zangiefAttack)
         {
             animator.SetBool("ZangiefAttack", zangiefAttack);
-            zangiefAttack = !zangiefAttack;
+            zangiefAttack = false;
         }
-        Debug.Log(zangiefAttack);
+        else
+            animator.SetBool("ZangiefAttack", zangiefAttack);
+
+        
+
     }
 }

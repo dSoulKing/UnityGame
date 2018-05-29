@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControllerZangief : MonoBehaviour {
+    
 
     private Animator animator;
 
@@ -14,7 +15,7 @@ public class ControllerZangief : MonoBehaviour {
     private void OnMouseDown()
     {
             animator.SetTrigger("clickToAttack");
-            ControllerRyu.zangiefAttack = !ControllerRyu.zangiefAttack;
+            ControllerRyu.zangiefAttack = true;
 
     }
 }
